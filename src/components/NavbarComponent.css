@@ -1,0 +1,131 @@
+/* Custom Navbar Background - Navy Blue */
+.custom-navbar {
+    background-color: #00004d !important; /* A deep Navy Blue */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle black shadow */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Custom Link Styling - White Text */
+.nav-link-custom {
+    color: white !important; /* Ensure the text is white */
+    margin: 0 10px;
+    padding-bottom: 5px; /* Space for the underline */
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Orange Hover Effect - Animated Underline */
+.nav-link-custom:hover {
+    color: #ffa500 !important; /* Orange text on hover */
+}
+
+/* Animated Underline Effect */
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Thickness of the line */
+    background-color: #ffa500; /* Orange color */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out; /* Animation for the width */
+}
+
+.nav-link-custom:hover::after {
+    width: 100%; /* Line expands to full width on hover */
+}
+
+/* Custom Text Color for the Brand (Orange) */
+.text-orange {
+    color: #ffa500 !important;
+}
+
+
+
+/* Hide default bootstrap toggle */
+.hamburger-btn {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  position: relative;
+}
+
+.hamburger-btn .navbar-toggler-icon {
+  filter: brightness(10);
+}
+
+/* Glassmorphism mobile dropdown menu */
+.mobile-menu-box {
+  position: absolute;
+  top: 70px;           /* slight gap below navbar */
+  right: 15px;         /* near the hamburger */
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+
+  /* GLASS EFFECT */
+  background: rgba(50, 49, 49, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  /* SHADOW */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  /* ANIMATION */
+  animation: slideDownFade 0.35s ease forwards;
+  opacity: 0;
+  transform: translateY(-10px);
+  z-index: 3000;
+}
+
+/* KEYFRAME ANIMATION */
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button */
+.close-menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  float: right;
+  margin-top: -10px;
+  margin-right: -5px;
+  cursor: pointer;
+}
+
+/* Links */
+.mobile-nav-link {
+  color: white !important;
+  padding: 10px 5px;
+  border-radius: 6px;
+  margin: 5px 0;
+  font-weight: 500;
+  transition: 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255, 133, 27, 0.7); /* orange tint */
+  color: #000 !important;
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 992px) {
+  .mobile-menu-box {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+}

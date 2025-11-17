@@ -1,0 +1,51 @@
+/* Footer Background - Solid Black */
+.footer-wrapper {
+    background-color: #000000; /* Solid Black */
+    border-top: 5px solid #ffa500; /* Striking Orange top border */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Subtle lift effect */
+}
+
+/* Link Styling */
+.footer-link {
+    color: #ccc; /* Light gray text */
+    text-decoration: none;
+    line-height: 2.2;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Orange Hover for Links */
+.footer-link:hover {
+    color: #ffa500; /* Orange on hover */
+    text-decoration: underline;
+}
+
+.footer-text-muted {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Divider Styling */
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.copyright-text {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* Social Icon Styling */
+.social-icon-link {
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Orange Hover and Slight Bounce Animation for Icons */
+.social-icon-link:hover {
+    color: #ffa500; /* Orange hover */
+    transform: translateY(-3px) scale(1.1); /* Slight bounce and scale */
+}

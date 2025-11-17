@@ -1,0 +1,93 @@
+/* Ensure the wrapper covers the screen and uses Navy Blue background */
+.page-wrapper {
+    background-color: #00004d; /* Deep Navy Blue */
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 60px; /* Space for the fixed Navbar */
+}
+
+/* Page Title and Divider Styling */
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.orange-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #ffa500; /* Orange */
+    border-radius: 2px;
+}
+
+/* Basic animation for page load */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-in {
+    animation: slideIn 0.6s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.card-fade-in {
+    animation: slideIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Card Lift/Shadow Effect for About Page */
+.card-hover-lift {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0a0a4c !important; /* Slightly lighter Navy Card */
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 10px #ffa50040; /* Orange glow */
+}
+
+
+/* Custom Form Styling for Dark Theme */
+.form-control-dark {
+    background-color: #1a1a5c !important; /* Slightly lighter navy for input fields */
+    border: 1px solid #ffa50040; /* Subtle orange border */
+    color: white !important;
+}
+
+/* Orange Focus Effect */
+.form-control-dark:focus {
+    background-color: #1a1a5c !important;
+    color: white !important;
+    border-color: #ffa500 !important; /* Vibrant orange on focus */
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.3) !important;
+}
+
+/* Styling for the Legal Accordion */
+.accordion-item {
+    background-color: #0a0a4c !important; /* Navy background for item */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 5px;
+}
+
+/* Header styling */
+.accordion-header button {
+    background-color: #1a1a5c !important; /* Slightly darker header */
+    color: white !important;
+    font-weight: 600;
+    border: none !important;
+    transition: background-color 0.3s;
+}
+
+.accordion-header button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.3) !important;
+    border-color: #ffa500 !important;
+}
+
+.accordion-body {
+    color: #ccc !important;
+    border-top: 1px solid rgba(255, 165, 0, 0.3) !important; /* Orange line separating body */
+}

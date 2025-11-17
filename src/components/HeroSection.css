@@ -1,0 +1,189 @@
+/* FULL SCREEN HERO WRAPPER */
+.hero-wrapper {
+    width: 100vw;
+    height: 100vh;           /* full screen height */
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #00004d;  /* deep navy */
+}
+
+/* Center the content perfectly */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HERO TITLE */
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.25;           /* Better spacing between headline lines */
+    margin-bottom: 20px;         /* Space below headline */
+}
+
+/* HERO SUBTITLE */
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;            /* Natural readable spacing */
+    margin-bottom: 30px;         /* Adds air before buttons */
+}
+/* Main CTA Button (Orange) */
+.cta-button {
+    background-color: #ffa500 !important;
+    border-color: #ffa500 !important;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff9900 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.5) !important;
+}
+
+/* Secondary transparent button */
+.cta-secondary {
+    border-width: 2px !important;
+}
+
+/* FULL-WIDTH ANIMATED BLEND FLASH */
+.hero-animated-blend {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.07),
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.12)
+    );
+
+    background-size: 300% 100%;
+    animation: heroFlash 6s linear infinite;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Flash movement animation */
+@keyframes heroFlash {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Glass transparent overlay */
+.hero-glass-overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.03);
+    z-index: 3;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.8s; }
+
+/* Pulse animation for CTA */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 2.5s infinite ease-in-out;
+}
+
+
+
+/* --- Store Button Styling --- */
+
+/* Base style for both store buttons */
+.store-button {
+    display: flex; /* Allows icon and text to align */
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+/* Icon specific styling */
+.store-icon {
+    font-size: 1.5rem; /* Larger icon size */
+    margin-right: 8px;
+    /* Optional: Small animation for the icon */
+    transition: transform 0.2s ease-in-out; 
+}
+
+/* Ensure the primary orange button (Google Play) is bright */
+.cta-button {
+    /* Existing Orange Styles */
+    background-color: #ffa500 !important;
+    border-color: #ffa500 !important;
+    color: #000 !important; /* Black text for better contrast on orange */
+}
+
+.cta-button:hover {
+    /* Existing Hover Styles */
+    background-color: #ff9900 !important;
+}
+
+/* Hover animation for icons */
+.store-button:hover .store-icon {
+    transform: scale(1.1); /* Icon slightly scales up on hover */
+}
+
+/* Secondary button (Apple App Store) specific styling */
+.cta-secondary {
+    border-width: 2px !important;
+    color: white !important; /* Ensure white text */
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 576px) {
+    /* Stack the buttons vertically on extra small screens */
+    .store-links {
+        gap: 15px !important; /* Increased vertical space */
+    }
+    .store-button {
+        width: 40%; /* Make buttons full width */
+        justify-content: center;
+    }
+}
+
+
+/* Styling for the Icon next to the Rotating Headline */
+.headline-icon {
+    color: #ffa500; /* Orange color */
+    font-size: 0.8em; /* Slightly smaller than the text */
+    vertical-align: middle;
+    margin-right: 8px;
+}
