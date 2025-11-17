@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaTiktok, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './FooterComponent.css';
 
 const FooterComponent = () => {
@@ -40,10 +40,10 @@ const FooterComponent = () => {
           <Col md={2} className="mb-4">
             <h5 className="mb-3">Follow Us</h5>
             <div className="social-icons">
-              <a href="#" target="_blank" className="social-icon-link"><FaFacebook /></a>
-              <a href="#" target="_blank" className="social-icon-link"><FaTwitter /></a>
-              <a href="#" target="_blank" className="social-icon-link"><FaInstagram /></a>
-              <a href="#" target="_blank" className="social-icon-link"><FaWhatsapp /></a>
+              <a href="https://www.facebook.com/share/17fBpxLKKk/" target="_blank" className="social-icon-link"><FaFacebook /></a>
+              <a href="https://www.tiktok.com/@naijago.app?_r=1&_t=ZS-91TNqv2Q0M3 " target="_blank" className="social-icon-link"><FaTiktok /></a>
+              <a href="https://www.instagram.com/naijagoappltd?igsh=MXRueGl1djcyYzU3bQ== " target="_blank" className="social-icon-link"><FaInstagram /></a>
+              <a href="https://wa.me/2348084431251" target="_blank" className="social-icon-link"><FaWhatsapp /></a>
             </div>
           </Col>
 
